@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: In reversed sets, sort3 performs better than sort1, which indicates that, despite having the same complexity, selection sort still performs less operations, because n(n+1)/2 and n^2, despite having the same complexity, are on different magnitudes.
+
+sort2 uses: Merge Sort
+
+How do you know?: Because when used on the reversed sets, where the number of operations is the highest possible, sort2 is the fastest, meaning it has the lowest higher bound of complexity.
+
+sort3 uses: Selection Sort
+
+How do you know?: In sorted sets, sort1 is better than sort1, which indicates that, in the best case, or the lower bound, sort1 is less complex than sort3, as bubble sort has a lower bound of n compared to n^2 of selection sort.
