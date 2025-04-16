@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Brazil Trivia!</title>
+        <script>
+
+            document.addEventListener("DOMContentLoaded", () => {
+
+                let bf = document.querySelector("#buttonFeedback");
+                let wrongs = document.querySelectorAll(".wrong");
+                wrongs.forEach((item) => {
+                    item.addEventListener("click", (event) => {
+                        item.style.backgroundColor = "Red";
+                        bf.innerHTML = "Incorrect";
+                    })
+                });
+                let right = document.querySelector(".right");
+                right.addEventListener("click", (event) => {
+                    right.style.backgroundColor = "Green";
+                    bf.innerHTML = "Correct";
+                });
+
+                document.querySelector(".submition").addEventListener('click', function() {
+                    let input = document.querySelector("input");
+                    let feedback = document.querySelector(".formfeedback");
+
+                    if (input.value === "Amazonia")
+                    {
+                        input.style.backgroundColor = "Green";
+                        feedback.innerHTML = "Correct";
+                    }
+                    else
+                    {
+                        input.style.backgroundColor = "Red";
+                        feedback.innerHTML = "Incorrect";
+                    }
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Brazil Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the capital of Brazil?</h3>
+                <button class="wrong">Rio de Janeiro</button>
+                <button class="wrong">São Paulo</button>
+                <button class="wrong">Salvador</button>
+                <button class="right">Brazilia</button>
+                <button class="wrong">Bahia</button>
+                <p id="buttonFeedback"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is the name of the biggest rainforest in Brazil?</h3>
+                <form>
+                    <input type="text"></input>
+                    <button class="submition">Submit</button>
+                </form>
+                <p class="formfeedback"></p>
+            </div>
+        </div>
+    </body>
+</html>

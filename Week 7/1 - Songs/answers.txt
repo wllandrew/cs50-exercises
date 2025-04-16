@@ -1,0 +1,6 @@
+I would use the command "SELECT names, ROUND((energy + valence + danceability) / 3) AS aura FROM songs;". To acess a table of song names and aura.
+Then i would get, in descending order, the best songs that match best the users aura itself, like in
+"SELECT names, AVG(energy + valence + danceability) AS aura FROM songs ORDER BY ABS(aura - user_aura) ASC LIMIT 5;"
+Which would return a table of the biggest matches.
+
+Songs are very subjective and this type of classification may not be very accurate.
