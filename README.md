@@ -8,7 +8,7 @@ If you are currently taking CS50, keep in mind the course's academic honesty pol
 
 ## 📚 Structure 
 
-There are 10 problem sets, one for each week starting at week 0.
+There are 10 problem sets, one for each week starting at week 0. In total, there are 27 problems.
 
 ### 0️⃣ - Week 0
 
