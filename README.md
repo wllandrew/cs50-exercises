@@ -4,7 +4,7 @@ This repository contains all of my solutions for the problems set / challenges i
 
 ## ⚖️ Acaemic Honesty
 
-If you are currently taking CS50, keep in mind the course's academic honesty policy. You should figure it out the solutions to all problem sets by yourself, and only then use repositories like this to compare answer and craft better solutions.
+If you are currently taking CS50, keep in mind the course's <a href="https://cs50.harvard.edu/x/2025/honesty/">academic honesty policy</a>. You should figure it out the solutions to all problem sets by yourself, and only then use repositories like this to compare answer and craft better solutions.
 
 ## 📚 Structure 
 
