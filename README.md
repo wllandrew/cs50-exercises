@@ -30,6 +30,6 @@ There are 10 problem sets, one for each week starting at week 0. In total, there
 
 ### 9️⃣ - Week 9
 
-### Final Project
+## Final Project
 
 For completing the course, you have to submit a final project, which is in <a href="">another repository</a>.
