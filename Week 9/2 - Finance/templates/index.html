@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <h2 style="padding-bottom: 30px">Current Portfolio</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Quantity</th>
+                <th>Current Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pair in portfolio %}
+            <tr>
+                <td>{{ pair["symbol"] }}</td>
+                <td>{{ pair["quantity"] }}</td>
+                <td>{{ pair["current_price"] | usd }}</td>
+                <td>{{ pair["total"] | usd}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td>Balance</td>
+                <td>{{ balance | usd }}</td>
+            </tr>
+            <tr>
+                <td>Total (Balance + Stock Value)</td>
+                <td>{{ total | usd}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

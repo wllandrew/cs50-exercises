@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>Shares</th>
+                <th>Type of transaction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in historic %}
+            <tr>
+                <td>{{ item["symbol"] }}</td>
+                <td>{{ item["price"] | usd }}</td>
+                <td>{{ item["shares"] }}</td>
+                {% if item["type"] == "BUY" %}
+                <td style="color: green">{{ item["type"] }}</td>
+                {% else %}
+                <td style="color: red">{{ item["type"] }}</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
