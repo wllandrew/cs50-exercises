@@ -239,7 +239,7 @@ def sell():
             db.execute("INSERT INTO transactions(user_id, symbol, price, shares, type) VALUES (?, ?, ?, ?, ?)",
                        session["user_id"], data["symbol"], data["price"], shares, "SELL")
 
-            value = diff * data["price"]
+            value = shares * data["price"]
             current_quantity = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
             db.execute("UPDATE users SET cash = ? WHERE id = ?", current_quantity + value, session["user_id"])
 
